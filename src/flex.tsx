@@ -1,7 +1,7 @@
 import type { BoxProps } from '@radix-ui/themes'
-import type { ReactElement } from 'react'
 import { Box } from '@radix-ui/themes'
-import { Breakpoint, breakpoints, Responsive } from '@radix-ui/themes/props'
+import { Responsive } from '@radix-ui/themes/props'
+import type { ReactElement } from 'react'
 import { z } from 'zod'
 import { getResponsive } from './responsive'
 

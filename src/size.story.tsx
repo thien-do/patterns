@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@radix-ui/themes'
+import { Box, Flex } from '@radix-ui/themes'
 import { Button } from './button'
 import { Checkbox } from './checkbox'
 import { FieldBlock } from './field/block'

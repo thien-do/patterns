@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { Box, Flex, Heading, Link } from '@radix-ui/themes'
-import { FieldStory } from '../field/story'
+import { FieldLabelStory } from '../field/story'
 import { FlexChildStory } from '../flex.story'
 import { SizePointerStory } from '../size.story'
 
@@ -24,7 +24,7 @@ export function AppPage(): ReactElement {
       </Box>
       <FlexChildStory />
       <SizePointerStory />
-      <FieldStory />
+      <FieldLabelStory />
     </Flex>
   )
 }
