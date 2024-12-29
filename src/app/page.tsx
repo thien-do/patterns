@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { Flex, Heading } from '@radix-ui/themes'
+import { Box, Flex, Heading, Link } from '@radix-ui/themes'
 import { FieldStory } from '../field/story'
 import { FlexChildStory } from '../flex.story'
 import { SizePointerStory } from '../size.story'
@@ -11,12 +11,20 @@ export function AppPage(): ReactElement {
       gap="9"
       p="4"
     >
-      <Heading as="h1" wrap="pretty">
-        Potentially useful patterns in user interfaces
-      </Heading>
+      <Box>
+        <Heading as="h1" wrap="pretty">
+          Potentially useful patterns in user interfaces
+        </Heading>
+        <Link
+          color="crimson"
+          href="https://github.com/thien-do/patterns"
+        >
+          github.com/thien-do/patterns
+        </Link>
+      </Box>
       <FlexChildStory />
-      <FieldStory />
       <SizePointerStory />
+      <FieldStory />
     </Flex>
   )
 }

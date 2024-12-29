@@ -17,7 +17,13 @@ export function FieldStory() {
   )
 
   const desc = `
-Hello
+**Use \`<FieldBlock />\` and \`<FieldInline />\`
+to provide explicit labels.**
+They both nest the input inside the label,
+so there's no need for an explicit \`id\` prop.
+
+Input components such as \`<TextField />\` and \`<Checkbox />\`
+don't come with labels by design.
 `
 
   return (
