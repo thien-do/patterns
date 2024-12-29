@@ -1,24 +1,17 @@
-import type { Metadata } from "next";
 import { ReactElement, ReactNode } from "react";
-import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { AppTheme } from "@/app/theme";
 
-export const metadata: Metadata = {
-  title: "Patterns",
-  description: "Potentially useful patterns in user interfaces",
-};
-
-export default function RootLayout(props: {
+export function AppLayout(props: {
   children: ReactNode;
 }): ReactElement {
   const { children } = props;
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Theme>
+        <AppTheme>
           {children}
-        </Theme>
+        </AppTheme>
       </body>
     </html>
   );
