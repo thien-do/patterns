@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ReactElement, ReactNode } from "react";
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
 
 export const metadata: Metadata = {
   title: "Patterns",
@@ -14,7 +16,9 @@ export default function RootLayout(props: {
   return (
     <html lang="en">
       <body>
-        {children}
+        <Theme>
+          {children}
+        </Theme>
       </body>
     </html>
   );
