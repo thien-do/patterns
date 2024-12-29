@@ -1,0 +1,4 @@
+.canvas {
+  border: 2px dashed var(--gray-6);
+  border-radius: var(--radius-3);
+}

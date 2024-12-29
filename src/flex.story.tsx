@@ -4,22 +4,21 @@ import { FlexChild } from './flex'
 
 export function FlexChildStory() {
   const canvas = (
-    <>
-      <Text as="div" color="gray">
-        Resize your window to see the "Bar" child
-        being truncated without overflowing:
-      </Text>
-      <Flex direction="row" gap="4">
-        <FlexChild flex="none">Foo</FlexChild>
-        <FlexChild flex="grow">
-          <Text truncate as="div">
-            {Array.from({ length: 100 }).fill('Bar').join(' ')}
-          </Text>
-        </FlexChild>
-        <FlexChild flex="none">Baz</FlexChild>
-      </Flex>
-    </>
+    <Flex direction="row" gap="4">
+      <FlexChild flex="none">Foo</FlexChild>
+      <FlexChild flex={1}>
+        <Text truncate as="div">
+          {Array.from({ length: 100 }).fill('Bar').join(' ')}
+        </Text>
+      </FlexChild>
+      <FlexChild flex="none">Baz</FlexChild>
+    </Flex>
   )
+
+  const hint = `
+Resize your window to see the "Bar" child
+being truncated without overflowing.
+`
 
   const desc = `
 **Use \`<FlexChild />\` when a flex container has [extrinsic size][].**
@@ -45,6 +44,7 @@ Its \`"flex"\` prop is also more reliable than the default
       title="Flex child"
       desc={desc}
       canvas={canvas}
+      hint={hint}
     />
   )
 }

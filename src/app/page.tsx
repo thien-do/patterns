@@ -10,7 +10,6 @@ export function AppPage(): ReactElement {
       direction="column"
       gap="9"
       p="4"
-      maxWidth="480px"
     >
       <Heading as="h1" wrap="pretty">
         Potentially useful patterns in user interfaces

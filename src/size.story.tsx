@@ -1,32 +1,29 @@
 import { Box, Flex, Text } from '@radix-ui/themes'
 import { Button } from './button'
-import { Card } from './card'
 import { Checkbox } from './checkbox'
-import { Story } from './utils/story'
 import { FieldBlock } from './field/block'
 import { FieldInline } from './field/inline'
 import { TextField } from './text-field'
+import { Story } from './utils/story'
 
 export function SizePointerStory() {
   const canvas = (
-    <>
-      <Text as="div" color="gray">
-        Open the Device Toolbar to see
-        the components become bigger in touch devices:
-      </Text>
-      <Box maxWidth="240px" asChild>
-        <Flex direction="column" gap="4">
-          <FieldBlock label="Store name">
-            <TextField.Root />
-          </FieldBlock>
-          <FieldInline label="Official store">
-            <Checkbox />
-          </FieldInline>
-          <Button>Create store</Button>
-        </Flex>
-      </Box>
-    </>
+    <Box maxWidth="240px" asChild>
+      <Flex direction="column" gap="4">
+        <FieldBlock label="Store name">
+          <TextField.Root />
+        </FieldBlock>
+        <FieldInline label="Official store">
+          <Checkbox />
+        </FieldInline>
+        <Button>Create store</Button>
+      </Flex>
+    </Box>
   )
+
+  const hint = `
+Open the Device Toolbar to see the components become bigger in touch devices.
+`
 
   const desc = `
 **The size of interactive components changes
@@ -49,6 +46,7 @@ but also prevents the [auto zooming][] of Safari on iOS devices.
       title="Size pointer"
       desc={desc}
       canvas={canvas}
+      hint={hint}
     />
   )
 }
