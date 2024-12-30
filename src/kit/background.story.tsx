@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react'
-import type { StoryCanvas } from '../utils/story'
 import { ExampleBox } from '@/example/box'
 import { ExampleFormBody } from '@/example/form'
 import { Story } from '../utils/story'

@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { Box, Flex, Heading, Link, Text } from '@radix-ui/themes'
+import { Flex, Heading, Link, Text } from '@radix-ui/themes'
 import css from './title.module.css'
 
 export function AppTitle(): ReactElement {
