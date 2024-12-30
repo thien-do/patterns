@@ -1,19 +1,19 @@
-import type { PaneProps } from '@/kit/pane'
 import type { ReactElement, ReactNode } from 'react'
 import { FlexChild } from '@/kit/flex'
+import { Pane, type PaneProps } from '@/kit/pane'
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import { Callout, Flex, Heading, Link, Text } from '@radix-ui/themes'
 import { Markdown } from './markdown'
 import css from './story.module.css'
 
-interface Canvas {
+export interface StoryCanvas {
   node: ReactNode
   pane?: PaneProps
 }
 
 export function Story(props: {
   title: string
-  canvas: ReactNode | Canvas[]
+  canvas: ReactNode | StoryCanvas[]
   hint?: ReactNode
   desc: string
 }): ReactElement {
@@ -48,21 +48,23 @@ export function Story(props: {
     </Callout.Root>
   )
 
-  const canvases: Canvas[]
+  const canvases: StoryCanvas[]
     = Array.isArray(canvas) ? canvas : [{ node: canvas }]
   const canvasNode = (
     <Text as="div" size="2" asChild>
       <Flex direction="column" gap="4">
         {canvases.map((canvas, index) => (
-          <Flex
+          <Pane
+            // "index" here is expected as "canvases" should be stable
+            // eslint-disable-next-line react/no-array-index-key
             key={index}
-            className={css.canvas}
-            direction="column"
-            gap="4"
-            p="4"
+            {...canvas.pane}
+            asChild
           >
-            {canvas.node}
-          </Flex>
+            <Flex className={css.canvas} direction="column" gap="4" p="4">
+              {canvas.node}
+            </Flex>
+          </Pane>
         ))}
       </Flex>
     </Text>

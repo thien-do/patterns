@@ -3,7 +3,8 @@ import { BackgroundStory } from '@/kit/background.story'
 import { FieldLabelStory } from '@/kit/field/story'
 import { FlexChildStory } from '@/kit/flex.story'
 import { SizePointerStory } from '@/kit/size.story'
-import { Box, Flex, Heading, Link } from '@radix-ui/themes'
+import { Box, Flex, Heading, Link, Text } from '@radix-ui/themes'
+import { AppTitle } from './title'
 
 export function AppPage(): ReactElement {
   return (
@@ -12,21 +13,11 @@ export function AppPage(): ReactElement {
       gap="9"
       p="4"
     >
-      <Box>
-        <Heading as="h1" wrap="pretty">
-          Potentially useful patterns in user interfaces
-        </Heading>
-        <Link
-          color="crimson"
-          href="https://github.com/thien-do/patterns"
-        >
-          github.com/thien-do/patterns
-        </Link>
-      </Box>
-      <BackgroundStory />
+      <AppTitle />
       <FlexChildStory />
-      <SizePointerStory />
       <FieldLabelStory />
+      <SizePointerStory />
+      <BackgroundStory />
     </Flex>
   )
 }

@@ -22,7 +22,7 @@ export function ExampleFormBody(): ReactElement {
   return (
     <>
       <ExampleFormFields />
-      <Button>Create store</Button>
+      <Button variant="soft">Create store</Button>
     </>
   )
 }
