@@ -1,5 +1,5 @@
 import { Flex, Text } from '@radix-ui/themes'
-import { Story } from './utils/story'
+import { Story } from '../utils/story'
 import { FlexChild } from './flex'
 
 export function FlexChildStory() {
@@ -40,7 +40,6 @@ Its \`"flex"\` prop is also more reliable than the default
 
   return (
     <Story
-      id="flex-child"
       title="Flex child"
       desc={desc}
       canvas={canvas}

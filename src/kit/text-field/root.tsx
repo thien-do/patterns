@@ -2,7 +2,7 @@
 
 import type { ReactElement } from 'react'
 import { TextField as RadixTextField } from '@radix-ui/themes'
-import { useSizePointer } from '../size'
+import { useSizePointer } from '@/kit/size'
 
 export function TextFieldRoot(props: RadixTextField.RootProps): ReactElement {
   const { ...rest } = props

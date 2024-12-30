@@ -3,7 +3,7 @@ import { Box } from '@radix-ui/themes'
 import { Responsive } from '@radix-ui/themes/props'
 import type { ReactElement } from 'react'
 import { z } from 'zod'
-import { getResponsive } from './responsive'
+import { getResponsive } from '@/kit/responsive'
 
 const valueSchema = z.union([
   z.literal('none'),

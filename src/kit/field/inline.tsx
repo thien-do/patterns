@@ -2,7 +2,7 @@
 
 import { Flex } from '@radix-ui/themes'
 import type { ReactElement, ReactNode } from 'react'
-import { useSizePointer } from '../size'
+import { useSizePointer } from '@/kit/size'
 
 export function FieldInline(props: {
   label: ReactNode

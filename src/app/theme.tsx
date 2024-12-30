@@ -2,6 +2,7 @@ import type { ReactElement, ReactNode } from 'react'
 import { Theme } from '@radix-ui/themes'
 import { ThemeProvider } from 'next-themes'
 import '@radix-ui/themes/styles.css'
+import "./theme.css";
 
 export function AppTheme(props: {
   children: ReactNode

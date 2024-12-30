@@ -1,20 +1,13 @@
+import { ExampleBox } from '@/example/box'
+import { ExampleFormFields } from '@/example/form'
 import { ReactElement } from 'react'
-import { Checkbox } from '../checkbox'
-import { TextField } from '../text-field'
-import { Story } from '../utils/story'
-import { FieldBlock } from './block'
-import { FieldInline } from './inline'
+import { Story } from '../../utils/story'
 
 export function FieldLabelStory(): ReactElement {
   const canvas = (
-    <>
-      <FieldBlock label="Block field">
-        <TextField.Root />
-      </FieldBlock>
-      <FieldInline label="Inline field">
-        <Checkbox />
-      </FieldInline>
-    </>
+    <ExampleBox maxWidth="240px">
+      <ExampleFormFields />
+    </ExampleBox>
   )
 
   const desc = `
@@ -33,7 +26,6 @@ for example via \`aria-label\` or \`aria-labelledby\`.
 
   return (
     <Story
-      id="field-label"
       title="Field label"
       canvas={canvas}
       desc={desc}

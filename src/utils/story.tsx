@@ -1,18 +1,25 @@
-import { FlexChild } from '@/flex'
+import { FlexChild } from '@/kit/flex'
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import { Callout, Flex, Heading, Link, Text } from '@radix-ui/themes'
 import type { ReactElement, ReactNode } from 'react'
 import { Markdown } from './markdown'
 import css from './story.module.css'
+import { PaneProps } from '@/kit/pane'
+
+interface Canvas {
+  node: ReactNode
+  pane?: PaneProps
+}
 
 export function Story(props: {
   title: string
-  id: string
-  canvas: ReactNode
+  canvas: ReactNode | Canvas[]
   hint?: ReactNode
   desc: string
 }): ReactElement {
-  const { title, id, canvas, hint, desc } = props
+  const { title, canvas, hint, desc } = props
+
+  const id = title.toLowerCase().replaceAll(" ", "-")
 
   const titleNode = (
     <Link href={`#${id}`} color="crimson">
@@ -41,10 +48,18 @@ export function Story(props: {
     </Callout.Root>
   )
 
+  const canvases: Canvas[] =
+    Array.isArray(canvas) ? canvas : [{ node: canvas }]
   const canvasNode = (
     <Text as="div" size="2" asChild>
-      <Flex className={css.canvas} direction="column" gap="4" p="4">
-        {canvas}
+      <Flex direction="column" gap="4">
+        {canvases.map((canvas, index) => (
+          <Flex
+            key={index} className={css.canvas} direction="column" gap="4" p="4"
+          >
+            {canvas.node}
+          </Flex>
+        ))}
       </Flex>
     </Text>
   )

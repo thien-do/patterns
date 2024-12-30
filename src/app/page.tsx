@@ -1,8 +1,9 @@
 import type { ReactElement } from 'react'
 import { Box, Flex, Heading, Link } from '@radix-ui/themes'
-import { FieldLabelStory } from '../field/story'
-import { FlexChildStory } from '../flex.story'
-import { SizePointerStory } from '../size.story'
+import { FieldLabelStory } from '@/kit/field/story'
+import { FlexChildStory } from '@/kit/flex.story'
+import { BackgroundStory } from '@/kit/background.story'
+import { SizePointerStory } from '@/kit/size.story'
 
 export function AppPage(): ReactElement {
   return (
@@ -22,6 +23,7 @@ export function AppPage(): ReactElement {
           github.com/thien-do/patterns
         </Link>
       </Box>
+      <BackgroundStory />
       <FlexChildStory />
       <SizePointerStory />
       <FieldLabelStory />

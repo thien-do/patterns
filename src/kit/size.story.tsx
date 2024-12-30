@@ -1,24 +1,12 @@
-import { Box, Flex } from '@radix-ui/themes'
-import { Button } from './button'
-import { Checkbox } from './checkbox'
-import { FieldBlock } from './field/block'
-import { FieldInline } from './field/inline'
-import { TextField } from './text-field'
-import { Story } from './utils/story'
+import { ExampleBox } from '@/example/box'
+import { ExampleFormBody } from '@/example/form'
+import { Story } from '@/utils/story'
 
 export function SizePointerStory() {
   const canvas = (
-    <Box maxWidth="240px" asChild>
-      <Flex direction="column" gap="4">
-        <FieldBlock label="Store name">
-          <TextField.Root />
-        </FieldBlock>
-        <FieldInline label="Official store">
-          <Checkbox />
-        </FieldInline>
-        <Button>Create store</Button>
-      </Flex>
-    </Box>
+    <ExampleBox maxWidth="240px">
+      <ExampleFormBody />
+    </ExampleBox>
   )
 
   const hint = `
@@ -42,7 +30,6 @@ but also prevents the [auto zooming][] of Safari on iOS devices.
 
   return (
     <Story
-      id="size-pointer"
       title="Size pointer"
       desc={desc}
       canvas={canvas}
