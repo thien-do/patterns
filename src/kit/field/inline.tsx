@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import { Flex } from '@radix-ui/themes'
 import type { ReactElement, ReactNode } from 'react'
 import { useSizePointer } from '@/kit/size'
+import { Flex } from '@radix-ui/themes'
 
 export function FieldInline(props: {
   label: ReactNode

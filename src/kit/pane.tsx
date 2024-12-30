@@ -19,7 +19,12 @@ export type PaneProps = BoxProps & {
 
 export function Pane(props: PaneProps): ReactElement {
   const {
-    background, shadow, radius, className, style, ...boxProps
+    background,
+    shadow,
+    radius,
+    className,
+    style,
+    ...boxProps
   } = props
 
   const backgroundVar = background === '0'

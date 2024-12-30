@@ -1,12 +1,12 @@
-import { ExampleBox } from "@/example/box";
-import { ExampleFormBody } from "@/example/form";
-import { ReactElement } from "react";
-import { Story } from "../utils/story";
-import { Card } from "./card";
-import { FieldInline } from "./field/inline";
-import { FieldBlock } from "./field/block";
-import { TextField } from "./text-field";
-import { Checkbox } from "./checkbox";
+import type { ReactElement } from 'react'
+import { ExampleBox } from '@/example/box'
+import { ExampleFormBody } from '@/example/form'
+import { Story } from '../utils/story'
+import { Card } from './card'
+import { Checkbox } from './checkbox'
+import { FieldBlock } from './field/block'
+import { FieldInline } from './field/inline'
+import { TextField } from './text-field'
 
 export function BackgroundStory(): ReactElement {
   const canvas = (

@@ -1,9 +1,9 @@
 import type { BoxProps } from '@radix-ui/themes'
-import { Box } from '@radix-ui/themes'
-import { Responsive } from '@radix-ui/themes/props'
+import type { Responsive } from '@radix-ui/themes/props'
 import type { ReactElement } from 'react'
-import { z } from 'zod'
 import { getResponsive } from '@/kit/responsive'
+import { Box } from '@radix-ui/themes'
+import { z } from 'zod'
 
 const valueSchema = z.union([
   z.literal('none'),

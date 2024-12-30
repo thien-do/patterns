@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
-import { Box, Flex, Heading, Link } from '@radix-ui/themes'
+import { BackgroundStory } from '@/kit/background.story'
 import { FieldLabelStory } from '@/kit/field/story'
 import { FlexChildStory } from '@/kit/flex.story'
-import { BackgroundStory } from '@/kit/background.story'
 import { SizePointerStory } from '@/kit/size.story'
+import { Box, Flex, Heading, Link } from '@radix-ui/themes'
 
 export function AppPage(): ReactElement {
   return (

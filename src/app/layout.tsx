@@ -1,10 +1,10 @@
-import { ReactElement, ReactNode } from "react";
-import { AppTheme } from "@/app/theme";
+import type { ReactElement, ReactNode } from 'react'
+import { AppTheme } from '@/app/theme'
 
 export function AppLayout(props: {
-  children: ReactNode;
+  children: ReactNode
 }): ReactElement {
-  const { children } = props;
+  const { children } = props
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -14,5 +14,5 @@ export function AppLayout(props: {
         </AppTheme>
       </body>
     </html>
-  );
+  )
 }

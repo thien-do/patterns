@@ -1,10 +1,10 @@
+import type { PaneProps } from '@/kit/pane'
+import type { ReactElement, ReactNode } from 'react'
 import { FlexChild } from '@/kit/flex'
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import { Callout, Flex, Heading, Link, Text } from '@radix-ui/themes'
-import type { ReactElement, ReactNode } from 'react'
 import { Markdown } from './markdown'
 import css from './story.module.css'
-import { PaneProps } from '@/kit/pane'
 
 interface Canvas {
   node: ReactNode
@@ -19,7 +19,7 @@ export function Story(props: {
 }): ReactElement {
   const { title, canvas, hint, desc } = props
 
-  const id = title.toLowerCase().replaceAll(" ", "-")
+  const id = title.toLowerCase().replaceAll(' ', '-')
 
   const titleNode = (
     <Link href={`#${id}`} color="crimson">
@@ -30,7 +30,7 @@ export function Story(props: {
   )
 
   const secondaryNode = (
-    <FlexChild flex={{ initial: "none", sm: 1 }}>
+    <FlexChild flex={{ initial: 'none', sm: 1 }}>
       <Flex direction="column" gap="4">
         <Markdown>{desc}</Markdown>
       </Flex>
@@ -48,14 +48,18 @@ export function Story(props: {
     </Callout.Root>
   )
 
-  const canvases: Canvas[] =
-    Array.isArray(canvas) ? canvas : [{ node: canvas }]
+  const canvases: Canvas[]
+    = Array.isArray(canvas) ? canvas : [{ node: canvas }]
   const canvasNode = (
     <Text as="div" size="2" asChild>
       <Flex direction="column" gap="4">
         {canvases.map((canvas, index) => (
           <Flex
-            key={index} className={css.canvas} direction="column" gap="4" p="4"
+            key={index}
+            className={css.canvas}
+            direction="column"
+            gap="4"
+            p="4"
           >
             {canvas.node}
           </Flex>
@@ -66,7 +70,7 @@ export function Story(props: {
 
   const primaryNode = (
     <FlexChild
-      flex={{ initial: "none", sm: 1 }}
+      flex={{ initial: 'none', sm: 1 }}
       asChild
     >
       <Flex direction="column" gap="4">
@@ -79,8 +83,8 @@ export function Story(props: {
   const bodyNode = (
     <Flex
       direction={{
-        initial: "column",
-        sm: "row-reverse",
+        initial: 'column',
+        sm: 'row-reverse',
       }}
       gap="4"
     >

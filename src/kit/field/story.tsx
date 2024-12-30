@@ -1,6 +1,6 @@
+import type { ReactElement } from 'react'
 import { ExampleBox } from '@/example/box'
 import { ExampleFormFields } from '@/example/form'
-import { ReactElement } from 'react'
 import { Story } from '../../utils/story'
 
 export function FieldLabelStory(): ReactElement {

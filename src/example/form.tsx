@@ -1,9 +1,9 @@
-import { FieldBlock } from "@/kit/field/block";
-import { FieldInline } from "@/kit/field/inline";
-import { TextField } from "@/kit/text-field";
-import { Checkbox } from "@/kit/checkbox";
-import { ReactElement } from "react";
-import { Button } from "@/kit/button";
+import type { ReactElement } from 'react'
+import { Button } from '@/kit/button'
+import { Checkbox } from '@/kit/checkbox'
+import { FieldBlock } from '@/kit/field/block'
+import { FieldInline } from '@/kit/field/inline'
+import { TextField } from '@/kit/text-field'
 
 export function ExampleFormFields(): ReactElement {
   return (

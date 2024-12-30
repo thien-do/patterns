@@ -3,7 +3,7 @@ import type { Components, Options } from 'react-markdown'
 import { Code, Link, Strong, Text } from '@radix-ui/themes'
 import ReactMarkdown from 'react-markdown'
 
-const filter = (props: any): any => {
+function filter(props: any): any {
   const { node, ...rest } = props
   return rest
 }

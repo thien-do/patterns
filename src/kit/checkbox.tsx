@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import type { CheckboxProps } from '@radix-ui/themes'
 import type { ReactElement } from 'react'
